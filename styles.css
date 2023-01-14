@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -22,6 +23,7 @@ header {
   align-items: center;
   height: 80px;
   padding: 0 10px;
+  background-color: var(--main-text-color);
 }
 
 main {
@@ -31,12 +33,20 @@ main {
 
 footer {
   display: flex;
-  height: 100px;
-  background-color: green;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  height: 50px;
+  background-color: var(--main-text-color);
 }
 
 h1, h4, h5, p, li {
   margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .header-wrapper {
@@ -56,11 +66,23 @@ h1, h4, h5, p, li {
   justify-content: center;
   align-items: center;
   width: 50px;
-  border: 3px solid var(--main-text-color);
+  border: 3px solid white;
   font-size: 1.8em;
   padding-top: 5px;
+  margin-left: 20px;
   cursor: pointer;
-  background-color: white;
+  text-decoration: none;
+  color: white;
+}
+
+.header-logo:hover {
+  transition: 0.3s;
+  border: 3px solid gold;
+  color: gold;
+}
+.nav-link:hover, a:hover {
+  transition: 0.3s;
+  color: gold;
 }
 .header-nav-list {
   display: flex;
@@ -75,16 +97,34 @@ h1, h4, h5, p, li {
   line-height: 1.8em;
 }
 .nav-link {
+  position: relative;
   display: flex;
   text-decoration: none;
   padding: 0 5px;
-  color: var(--main-text-color);
 }
+.nav-link::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: gold;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.nav-link:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+
 .section-about {
   display: flex;
+  align-items: center;
   width: 100%;
   height: auto;
-  padding-left: 70px;
+  padding-left: 65px;
   background-color: white;
 }
 
@@ -95,8 +135,8 @@ h1, h4, h5, p, li {
 
 .about-photo {
   display: flex;
-  width: 200px;
-  max-height: 270px;
+  width: 250px;
+  max-height: 250px;
 }
 
 .about-content-wrapper {
@@ -150,7 +190,9 @@ h1, h4, h5, p, li {
   flex-direction: column;
   width: 100%;
   gap: 5px;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  background-color: var(--main-text-color);
+  color: white;
 }
 
 .skills-section-title {
@@ -159,6 +201,10 @@ h1, h4, h5, p, li {
   padding: 20px 20px 0 0;
 }
 .line {
+  border: 2px solid white;
+  margin: 5px 20px 5px 0;
+}
+.line2 {
   border: 2px solid black;
   margin: 5px 20px 5px 0;
 }
@@ -181,33 +227,37 @@ h1, h4, h5, p, li {
   height: 20px;
   background-image: url(./assets/icons/phone.png);
   background-size: cover;
+  filter: invert(1);
 }
 .telegram-img {
   width: 20px;
   height: 20px;
   background-image: url(./assets/icons/telegram.png);
   background-size: cover;
+  filter: invert(1);
 }
 .mail-img {
   width: 20px;
   height: 20px;
   background-image: url(./assets/icons/mail.png);
   background-size: cover;
+  filter: invert(1);
 }
 .linkedin-img {
   width: 20px;
   height: 20px;
   background-image: url(./assets/icons/linkedin.png);
   background-size: cover;
+  filter: invert(1);
 }
 .education, .languages {
   display: flex;
   flex-direction: column;
-  background-color: gold;
   width: 100%;
   gap: 5px;
   padding-bottom: 15px;
   line-height: 1em;
+  color: black;
 }
 .education-speciality {
   font-style: italic;
@@ -220,6 +270,8 @@ h1, h4, h5, p, li {
   width: 100%;
   gap: 5px;
   padding-bottom: 15px;
+  background-color: var(--main-text-color);
+  color: white;
 }
 
 .skills-text {
@@ -282,4 +334,9 @@ h1, h4, h5, p, li {
 .content-list {
   line-height: 1.4em;
   padding-left: 55px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
 }
