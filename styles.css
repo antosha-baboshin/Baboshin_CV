@@ -121,10 +121,11 @@ a {
 .section-about {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   height: auto;
-  padding-left: 65px;
   background-color: white;
+  padding: 10px 0px 10px 40px;
 }
 
 .about-photo-wrapper {
@@ -135,7 +136,6 @@ a {
 .about-photo {
   display: flex;
   width: 250px;
-  max-height: 250px;
 }
 
 .about-content-wrapper {
@@ -150,6 +150,7 @@ a {
   font-family: 'Righteous', cursive;
   font-size: 3em;
   margin-left: 40px;
+  padding-right: 10px;
 }
 
 .about-quo {
@@ -220,6 +221,7 @@ a {
   text-align: end;
   font-weight: 600;
   font-size: 0.8em;
+  padding-left: 10px;
 }
 .phone-img {
   width: 20px;
@@ -280,6 +282,8 @@ a {
   font-weight: 600;
   font-size: 0.8em;
   gap: 10px;
+  padding-left: 10px;
+  line-height: 1.3em;
 }
 
 .experience-wrapper {
@@ -412,6 +416,7 @@ input {
 	width: 150px;
 	height: 3em;
 	margin-right: 1em;
+  padding: 25px 0;
 }
 .controls label {
 	display: flex;
@@ -523,5 +528,61 @@ label:hover {
     visibility: visible;
     right: 0%;
     transition-duration: 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav-list {
+    width: 100%;
+    align-items: center;
+  }
+  .section-about {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .name {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .about-quo {
+    text-align: center;
+    padding-left: 0;
+  }
+  .main-section {
+    flex-direction: column-reverse;
+  }
+  .experience-wrapper {
+    width: 100%;
+  }
+  .skills-wrapper {
+    width: 100%;
+  }
+  .skills-section-title {
+    justify-content: center;
+  }
+  .experience-section-title {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .content-list {
+    padding-right: 20px;
+  }
+  .line-exp {
+    margin: 0 20px;
+  }
+  .line, .line2 {
+    margin-left: 20px;
+  }
+  .contact-block, .contact-text  {
+    justify-content: center;
+    text-align: center;
+  }
+  .skills-text {
+    text-align: center;
+  }
+  .slides {
+    background-size: 100% auto;
   }
 }
