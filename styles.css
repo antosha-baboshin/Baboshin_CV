@@ -88,7 +88,6 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   list-style: none;
   padding: 0 20px;
   margin: 0 40px 0 0;
@@ -449,4 +448,80 @@ label:hover {
 #slide2:checked ~ .controls label:nth-of-type(3) > .point,
 #slide3:checked ~ .controls label:nth-of-type(4) > .point {
 	background: gold;
+}
+
+.menu-btn {
+  display: flex;
+  visibility: hidden;
+  align-items: center; 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition-duration: 0.3s;
+}
+
+.menu-btn > span::before {
+  content: '';
+  top: -12px;
+  transition-duration: 0.3s;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 12px;
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .menu-btn {
+    visibility: visible;
+  }
+  .header-nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    flex-direction: column;
+    width: 40%;
+    background-color: var(--main-text-color);
+    padding: 30px;
+    top: 0;
+    right: -100%;
+    visibility: hidden;
+    margin: 0;
+    transition-duration: 0.3s;
+    z-index: 1;
+  }
+  #burger:checked ~ .menu-btn > span {
+    transform: rotate(45deg);
+    transition-duration: 0.3s;
+  }
+  #burger:checked ~ .menu-btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    transition-duration: 0.3s;
+  }
+  #burger:checked ~ .menu-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition-duration: 0.3s;
+  }
+  #burger:checked ~ .header-nav-list {
+    visibility: visible;
+    right: 0%;
+    transition-duration: 0.3s;
+  }
 }
