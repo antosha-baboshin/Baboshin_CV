@@ -459,7 +459,7 @@ label:hover {
   display: flex;
   visibility: hidden;
   align-items: center; 
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   width: 40px;
@@ -529,6 +529,9 @@ label:hover {
     right: 0%;
     transition-duration: 0.3s;
   }
+  #burger:checked ~ .menu-btn {
+    position: fixed;
+  }
 }
 
 @media (max-width: 768px) {
@@ -584,5 +587,38 @@ label:hover {
   }
   .slides {
     background-size: 100% auto;
+  }
+  .education {
+    order: -1;
+    background-color: var(--main-text-color);
+    color: aliceblue;
+  }
+  .languages {
+    background-color: var(--main-text-color);
+    color: aliceblue;
+  }
+  .contacts {
+    order: 2;
+    background-color: white;
+    color: var(--main-text-color)
+  }
+  .skills {
+    background-color: white;
+    color: var(--main-text-color)
+  }
+  .line {
+    border: 2px solid var(--main-text-color);
+  }
+  .line2 {
+    border: 2px solid white;
+  }
+  .contacts > .contact-block > .contact-text > a {
+    color: var(--main-text-color);
+  }
+  .contacts > .contact-block > .phone-img,
+  .contacts > .contact-block > .mail-img,
+  .contacts > .contact-block > .linkedin-img,
+  .contacts > .contact-block > .telegram-img {
+    filter: invert(13%) sepia(51%) saturate(3153%) hue-rotate(229deg) brightness(89%) contrast(108%);
   }
 }
