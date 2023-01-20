@@ -490,6 +490,17 @@ label:hover {
   transition-duration: 0.3s;
 }
 
+.nav-list-wrapper {
+  position: absolute;
+  display: none;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background-color: black;  
+}
+
 @media (max-width: 1000px) {
   .menu-btn {
     visibility: visible;
@@ -531,6 +542,10 @@ label:hover {
   }
   #burger:checked ~ .menu-btn {
     position: fixed;
+  }
+  .nav-list-wrapper {
+    width: 100vw;
+    height: 100vh;
   }
 }
 
