@@ -1,7 +1,7 @@
-const NAV_LINKS = document.querySelectorAll('.nav-link');
+const NAV_LINKS = document.querySelectorAll('.header__link');
 const BURGER = document.getElementById('burger');
 const BODY = document.getElementsByTagName('body')[0];
-const MENU_WRAPPER = document.querySelector('.nav-list-wrapper');
+const MENU_WRAPPER = document.querySelector('.header__blackout');
 
 const toggleMenu = () => {
   if (!BURGER.checked) {
