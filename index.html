@@ -35,9 +35,7 @@
   </header>
   <main>
     <section class="about">
-      <div class="about__photo-wrapper">
-        <img src="./assets/images/photo.jpg" alt="Photo" class="about__photo">
-      </div>
+      <img src="./assets/images/photo.jpg" alt="Photo" class="about__photo">
       <div class="about__content-wrapper">
         <h1 class="about__name" id="about">ANTON BABOSHYN</h1>
         <span class="about__position">Front-End Developer</span>
@@ -49,38 +47,38 @@
     <section class="main">
       <div class="main__wrapper">
 
-        <div class="main__contacts">
+        <div class="main__block main__block_contacts">
           <h4 class="main__title" id="contacts">CONTACTS</h4>
-          <div class="main__line"></div>
+          <div class="main__line main__line_white"></div>
           <div class="main__content-block">
             <div class="main__text">
               <a href="tel:+375291390894">+375(29)1390894</a>
             </div>
-            <div class="main__img_phone"></div>  
+            <div class="main__img main__img_phone"></div>  
           </div>
           <div class="main__content-block">
             <div class="main__text">
               <a href="mailto:antosha.js@gmail.com">antosha.js@gmail.com</a>
             </div>
-            <div class="main__img_mail"></div>  
+            <div class="main__img main__img_mail"></div>  
           </div> 
           <div class="main__content-block">
             <div class="main__text">
               <a href="https://www.linkedin.com/in/antosha-baboshin">Antosha Baboshin</a>
             </div>
-            <div class="main__img_linkedin"></div>  
+            <div class="main__img main__img_linkedin"></div>  
           </div> 
           <div class="main__content-block">
             <div class="main__text">
               <a href="https://t.me/ababoshin">@ababoshin</a>
             </div>
-            <div class="main__img_telegram"></div>  
+            <div class="main__img main__img_telegram"></div>  
           </div>          
         </div>
 
-        <div class="main__education">
+        <div class="main__block main__block_education">
           <h4 class="main__title" id="education">EDUCATION</h4>
-          <div class="main__line2"></div>
+          <div class="main__line main__line_black"></div>
           <div class="main__content-block">
             <div class="main__text">
               <span>The Academy of Public Administration under the aegis of the President of the Republic of Belarus</span>
@@ -101,9 +99,9 @@
           </div> 
         </div>
 
-        <div class="main__skills">
+        <div class="main__block main__block_skills">
           <h4 class="main__title" id="skills">SKILLS</h4>
-          <div class="main__line"></div>
+          <div class="main__line main__line_white"></div>
           <div class="main__content-block">
             <div class="main__list">
               <span>JavaScript / TypeScript</span>
@@ -117,9 +115,9 @@
           </div> 
         </div>
 
-        <div class="main__languages">
+        <div class="main__block main__block_languages">
           <h4 class="main__title">LANGUAGES</h4>
-          <div class="main__line2"></div>
+          <div class="main__line main__line_black"></div>
           <div class="main__content-block">
             <div class="main__list">
               <span>English - B1 (Intermediate)</span>
@@ -183,28 +181,28 @@
       </div>
     </section>
 
-    <section class="main__video" id="video">
+    <section class="video" id="video">
       <h2>Video</h2>
-      <video src="./assets/videos/video.mov" controls alt="Player" class="main__player" poster="./assets/images/cover.jpg">
+      <video src="./assets/videos/video.mov" controls alt="Player" class="video__player" poster="./assets/images/cover.jpg">
     </section>
 
-    <section class="main__slider-wrapper" id="slider">
+    <section class="slider" id="slider">
       <h2>CSS Slider</h2>
       <input type="radio" name="point" id="slide0" checked>
       <input type="radio" name="point" id="slide1">
       <input type="radio" name="point" id="slide2">
       <input type="radio" name="point" id="slide3">
-      <div class="main__slider">
-          <div class="main__slide main_slide0"></div>
-          <div class="main__slide main_slide1"></div>
-          <div class="main__slide main_slide2"></div>
-          <div class="main__slide main_slide3"></div>
+      <div class="slider__wrapper">
+          <div class="slider__slide slider__slide_slide0"></div>
+          <div class="slider__slide slider__slide_slide1"></div>
+          <div class="slider__slide slider__slide_slide2"></div>
+          <div class="slider__slide slider__slide_slide3"></div>
       </div>
         <div class="main__controls">
-            <label for="slide0"><div class="main__point"></div></label>
-            <label for="slide1"><div class="main__point"></div></label>
-            <label for="slide2"><div class="main__point"></div></label>
-            <label for="slide3"><div class="main__point"></div></label>
+            <label for="slide0"><div class="slider__point"></div></label>
+            <label for="slide1"><div class="slider__point"></div></label>
+            <label for="slide2"><div class="slider__point"></div></label>
+            <label for="slide3"><div class="slider__point"></div></label>
         </div>
     </section>
   </main>
